@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#0f2027;
+}
+
+/* Animated Gradient Background */
+.bg-animation{
+    position:absolute;
+    width:200%;
+    height:200%;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ADEDE, #0f2027);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+    z-index:-1;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Glass Card */
+.card{
+    width:380px;
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+/* Profile Image */
+.profile-img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:4px solid white;
+    margin-bottom:20px;
+}
+
+/* Name */
+h1{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-shadow:0 0 15px rgba(255,255,255,0.4);
+}
+
+/* Subtitle */
+h3{
+    color:#111;   /* Dark text */
+    font-size:14px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+/* Description */
+p{
+    color:#eee;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* Button */
+.btn{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:14px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#ff6ec4,#7873f5);
+    color:white;
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(255,110,196,0.7);
+}
